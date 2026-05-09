@@ -349,3 +349,76 @@ function togglePlay(play) {
   play ? audio.play() : audio.pause()
   playPauseButton.classList.toggle('playing', play)
 }
+
+// ========== 动态星星 ==========
+function createStars() {
+  const container = document.getElementById('starsContainer')
+  if (!container) return
+  const count = 50
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement('div')
+    star.classList.add('star')
+    star.style.left = Math.random() * 100 + '%'
+    star.style.top = Math.random() * 100 + '%'
+    star.style.setProperty('--duration', (2 + Math.random() * 4) + 's')
+    star.style.setProperty('--delay', (Math.random() * 3) + 's')
+    star.style.width = (2 + Math.random() * 4) + 'px'
+    star.style.height = star.style.width
+    container.appendChild(star)
+  }
+}
+
+// ========== 浮动光点 ==========
+function createParticles() {
+  const container = document.getElementById('particlesContainer')
+  if (!container) return
+  const colors = ['#ffd700', '#ff69b4', '#87ceeb', '#98fb98', '#dda0dd']
+  const count = 20
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement('div')
+    p.classList.add('particle')
+    p.style.left = Math.random() * 100 + '%'
+    p.style.width = (4 + Math.random() * 8) + 'px'
+    p.style.height = p.style.width
+    p.style.background = colors[Math.floor(Math.random() * colors.length)]
+    p.style.setProperty('--duration', (6 + Math.random() * 10) + 's')
+    p.style.setProperty('--delay', (Math.random() * 8) + 's')
+    container.appendChild(p)
+  }
+}
+
+// ========== 蜡烛系统 ==========
+let flameStates = [true, true, true]
+let allBlown = false
+let wishCount = 0
+
+function blowCandle(index) {
+  if (flameStates[index] || allBlown) return
+
+  flameStates[index] = false
+  const flame = document.getElementById('flame' + index)
+  const smoke = document.getElementById('smoke' + index)
+
+  flame.classList.add('blown')
+  smoke.classList.add('visible')
+
+  wishCount++
+
+  if (wishCount >= 3) {
+    allBlown = true
+    showWishResult()
+  }
+}
+
+function showWishResult() {
+  const resultEl = document.getElementById('wishResult')
+  const wishText = window.__wishResultText || '愿你所有的愿望都能实现！✨🎉'
+  resultEl.textContent = wishText
+  setTimeout(() => {
+    resultEl.classList.add('visible')
+  }, 300)
+}
+
+// 初始化
+createStars()
+createParticles()

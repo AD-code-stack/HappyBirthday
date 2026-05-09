@@ -18,6 +18,10 @@
     <p id="startButton" class="two button">准备好了，我们开始吧！</p>
   </div>
 
+  <!-- 闪烁星星 + 浮动光点 -->
+  <div class="stars-container" id="starsContainer"></div>
+  <div class="particles-container" id="particlesContainer"></div>
+
   <div class="container">
     <div class="one">
       <h1 class="one">
@@ -130,6 +134,35 @@
       <p data-node-name="outroText">Okay, now come back and tell me if you liked it.</p>
       <p id="replay" data-node-name="replayText">Or click, if you want to watch it again.</p>
       <p class="last-smile" data-node-name="outroSmiley">:)</p>
+    </div>
+    <div class="ten">
+      <div class="candle-scene">
+        <p class="wish-instruction" data-node-name="wishInstruction">🎂 许个愿吧，吹灭蜡烛！</p>
+        <div class="candles-row">
+          <div class="candle candle-1" onclick="blowCandle(0)">
+            <div class="flame-wrapper">
+              <div class="flame" id="flame0"></div>
+              <div class="smoke" id="smoke0"></div>
+            </div>
+            <div class="candle-body"></div>
+          </div>
+          <div class="candle candle-2" onclick="blowCandle(1)">
+            <div class="flame-wrapper">
+              <div class="flame" id="flame1"></div>
+              <div class="smoke" id="smoke1"></div>
+            </div>
+            <div class="candle-body"></div>
+          </div>
+          <div class="candle candle-3" onclick="blowCandle(2)">
+            <div class="flame-wrapper">
+              <div class="flame" id="flame2"></div>
+              <div class="smoke" id="smoke2"></div>
+            </div>
+            <div class="candle-body"></div>
+          </div>
+        </div>
+        <p class="wish-result" id="wishResult" data-node-name="wishResultText"></p>
+      </div>
     </div>
     <canvas id="fireworksCanvas"></canvas>
   </div>
