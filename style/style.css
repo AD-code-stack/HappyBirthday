@@ -2,6 +2,10 @@ html {
 
   box-sizing: border-box;
 
+  background: url('../img/角落生物.jpg') no-repeat center center fixed;
+
+  background-size: cover;
+
 }
 
 
@@ -194,9 +198,9 @@ body::before {
 
 .baby-photo {
 
-  width: 200px;
+  width: 160px;
 
-  height: 200px;
+  height: 160px;
 
   border-radius: 50%;
 
@@ -529,6 +533,16 @@ canvas {
   top: 12vh;
 
   z-index: 1;
+
+}
+
+
+
+.container div.ten {
+
+  top: 34vh;
+
+  z-index: 3;
 
 }
 
