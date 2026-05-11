@@ -304,6 +304,11 @@ const animationTimeline = () => {
       y: 30,
       zIndex: "-1"
     })
+    .set(".ten", {
+      visibility: "visible",
+      opacity: 1,
+      pointerEvents: "auto"
+    })
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
       ".last-smile",
