@@ -141,27 +141,37 @@
           <img class="baby-photo" src="img/宝宝.jpg" alt="宝宝照片">
         </div>
         <p class="wish-instruction" data-node-name="wishInstruction">🎂 许个愿吧，吹灭蜡烛！</p>
-        <div class="candles-row">
-          <div class="candle candle-1" onclick="blowCandle(0)">
-            <div class="flame-wrapper">
-              <div class="flame" id="flame0"></div>
-              <div class="smoke" id="smoke0"></div>
+        <div class="cake-wrapper">
+          <div class="candles-row">
+            <div class="candle candle-1" onclick="blowCandle(0)">
+              <div class="flame-wrapper">
+                <div class="flame" id="flame0"></div>
+                <div class="smoke" id="smoke0"></div>
+              </div>
+              <div class="candle-body"></div>
             </div>
-            <div class="candle-body"></div>
+            <div class="candle candle-2" onclick="blowCandle(1)">
+              <div class="flame-wrapper">
+                <div class="flame" id="flame1"></div>
+                <div class="smoke" id="smoke1"></div>
+              </div>
+              <div class="candle-body"></div>
+            </div>
+            <div class="candle candle-3" onclick="blowCandle(2)">
+              <div class="flame-wrapper">
+                <div class="flame" id="flame2"></div>
+                <div class="smoke" id="smoke2"></div>
+              </div>
+              <div class="candle-body"></div>
+            </div>
           </div>
-          <div class="candle candle-2" onclick="blowCandle(1)">
-            <div class="flame-wrapper">
-              <div class="flame" id="flame1"></div>
-              <div class="smoke" id="smoke1"></div>
-            </div>
-            <div class="candle-body"></div>
-          </div>
-          <div class="candle candle-3" onclick="blowCandle(2)">
-            <div class="flame-wrapper">
-              <div class="flame" id="flame2"></div>
-              <div class="smoke" id="smoke2"></div>
-            </div>
-            <div class="candle-body"></div>
+          <div class="cake-base">
+            <div class="cake-icing"></div>
+            <div class="cake-sprinkles"></div>
+            <div class="cake-strawberry strawberry-left"></div>
+            <div class="cake-strawberry strawberry-right"></div>
+            <div class="cake-layer cake-layer-top"></div>
+            <div class="cake-layer cake-layer-bottom"></div>
           </div>
         </div>
         <p class="wish-result" id="wishResult" data-node-name="wishResultText"></p>

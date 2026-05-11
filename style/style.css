@@ -226,11 +226,265 @@ body::before {
 
 
 
+.cake-wrapper {
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 8px;
+
+}
+
+
+
 .candles-row {
 
   display: flex;
 
   gap: 40px;
+
+  align-items: flex-end;
+
+  margin-bottom: -8px;
+
+  position: relative;
+
+  z-index: 3;
+
+}
+
+
+
+.cake-base {
+
+  position: relative;
+
+  width: 220px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+
+
+.cake-icing {
+
+  width: 200px;
+
+  height: 20px;
+
+  background: linear-gradient(180deg, #fffafc 0%, #ffd6ea 55%, #ffbfdc 100%);
+
+  border-radius: 18px 18px 12px 12px;
+
+  box-shadow: inset 0 -3px 0 rgba(255, 182, 193, 0.55), 0 4px 10px rgba(255, 182, 193, 0.28);
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+
+.cake-icing::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: -10px;
+
+  height: 14px;
+
+  background: radial-gradient(circle at 10px 0, #ffd6ea 8px, transparent 9px) repeat-x;
+
+  background-size: 28px 14px;
+
+}
+
+
+
+.cake-sprinkles {
+
+  position: absolute;
+
+  top: 4px;
+
+  width: 180px;
+
+  height: 14px;
+
+  z-index: 4;
+
+  background:
+    radial-gradient(circle, #ff6fa8 0 2px, transparent 3px) 8px 2px/36px 12px repeat,
+    radial-gradient(circle, #ffd84d 0 2px, transparent 3px) 20px 6px/42px 12px repeat,
+    radial-gradient(circle, #7ed6ff 0 2px, transparent 3px) 30px 3px/40px 12px repeat,
+    radial-gradient(circle, #98fb98 0 2px, transparent 3px) 14px 8px/38px 12px repeat;
+
+}
+
+
+
+.cake-strawberry {
+
+  position: absolute;
+
+  top: -10px;
+
+  width: 18px;
+
+  height: 18px;
+
+  background: linear-gradient(180deg, #ff6b8f 0%, #e84168 100%);
+
+  border-radius: 50% 50% 55% 55%;
+
+  transform: rotate(45deg);
+
+  z-index: 5;
+
+  box-shadow: 0 2px 6px rgba(232, 65, 104, 0.25);
+
+}
+
+
+
+.cake-strawberry::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 10px;
+
+  height: 6px;
+
+  background: #74c365;
+
+  border-radius: 8px 8px 0 0;
+
+  top: -5px;
+
+  left: 3px;
+
+  transform: rotate(-45deg);
+
+}
+
+
+
+.strawberry-left {
+
+  left: 26px;
+
+}
+
+
+
+.strawberry-right {
+
+  right: 26px;
+
+}
+
+
+
+.cake-layer {
+
+  border-radius: 14px;
+
+  box-shadow: 0 8px 18px rgba(214, 150, 170, 0.18);
+
+}
+
+
+
+.cake-layer-top {
+
+  width: 180px;
+
+  height: 40px;
+
+  margin-top: 8px;
+
+  background: linear-gradient(180deg, #fff0d9 0%, #ffd3a8 100%);
+
+  position: relative;
+
+}
+
+
+
+.cake-layer-top::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 16px;
+
+  right: 16px;
+
+  top: 14px;
+
+  height: 6px;
+
+  background: rgba(255,255,255,0.35);
+
+  border-radius: 999px;
+
+}
+
+
+
+.cake-layer-bottom {
+
+  width: 220px;
+
+  height: 56px;
+
+  margin-top: 6px;
+
+  background: linear-gradient(180deg, #ffd8c2 0%, #ffb68f 100%);
+
+  position: relative;
+
+}
+
+
+
+.cake-layer-bottom::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 20px;
+
+  right: 20px;
+
+  top: 18px;
+
+  height: 8px;
+
+  background: rgba(255,255,255,0.26);
+
+  border-radius: 999px;
 
 }
 
